@@ -10,7 +10,7 @@ app = Flask(__name__)
 def index():
     data=request.get_json()
     print(data)
-    bot.send_message(chat_id=data['message']['chat']['id'],text=data['message']['text'])
+    await bot.send_message(chat_id=data['message']['chat']['id'], text=data['message']['text'])
     return 'index page'
 
 if __name__=="__main__":
