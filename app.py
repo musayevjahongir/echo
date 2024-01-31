@@ -1,7 +1,7 @@
 from flask import Flask,request
 import telegram
 # Create the application instance
-TOKEN ='6804364814:AAFG6WL6EcqnIgL_9qY4euWHUcvGaCKLU08'
+TOKEN ='6800652506:AAFckawp2yqAzZdI9EgCui2qZqu_KUqnwPE'
 bot = telegram.Bot(TOKEN)
 # chat_id = '1432402481'
 app = Flask(__name__)
