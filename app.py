@@ -13,5 +13,3 @@ def index():
     bot.send_message(chat_id=data['message']['chat']['id'],text=data['message']['text'])
     
 
-if __name__=="__main__":
-    app.run(debug=True)
