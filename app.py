@@ -12,5 +12,6 @@ def index():
     data = request.get_json()
     print(data)
     chat_id=data['message']['chat']['id']
-    bot.send_message(chat_id=chat_id, text='Hello World!!!')
+    text=data["message"]['text']
+    bot.send_message(chat_id=chat_id, text=text)
     return 'index page'
