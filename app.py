@@ -14,4 +14,4 @@ def index():
     chat_id=data['message']['chat']['id']
     text=data["message"]['text']
     bot.send_message(chat_id=chat_id, text=text)
-    return 'index page'
+    return 'hello world'
