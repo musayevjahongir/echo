@@ -15,8 +15,14 @@ def index():
         chat_id=data['message']['chat']['id']
         text=data["message"]['text']
         bot.send_message(chat_id=chat_id, text=text)
+
     if 'photo' in data['message']:
         chat_id=data['message']['chat']['id']
         photo=data["message"]['photo'][0]['file_id']
         bot.send_photo(chat_id, photo)
+
+    if 'video' in data['message']:
+        chat_id=data['message']['chat']['id']
+        video=data["message"]['video']['thumbnail']['file_id']
+        bot.send_photo(chat_id, video)
     return 'hello world'
