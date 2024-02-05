@@ -18,5 +18,5 @@ def index():
     if 'photo' in data['message']:
         chat_id=data['message']['chat']['id']
         photo=data["message"]['photo'][0]['file_id']
-        bot.send_photo(chat_id=chat_id, file_id=photo)
+        bot.send_photo(chat_id, photo)
     return 'hello world'
