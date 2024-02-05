@@ -24,5 +24,5 @@ def index():
     if 'video' in data['message']:
         chat_id=data['message']['chat']['id']
         video=data["message"]['video']['thumbnail']['file_id']
-        bot.send_photo(chat_id, video)
+        bot.send_video(chat_id, video)
     return 'hello world'
