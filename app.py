@@ -39,7 +39,7 @@ def index():
         bot.send_video_note(chat_id, video_note)
     elif 'location' in data['message']:
         chat_id=data['message']['chat']['id']
-        latitude=data["message"]['latitude']['file_id']
-        longitude=data["message"]['longitude']['file_id']
+        latitude=data["message"]['location']['latitude']
+        longitude=data["message"]['location']['longitude']
         bot.send_location(chat_id, latitude, longitude)
     return 'hello world'
