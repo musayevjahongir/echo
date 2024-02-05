@@ -45,5 +45,6 @@ def index():
     elif 'dice' in data['message']:
         chat_id=data['message']['chat']['id']
         emoji=data["message"]['dice']['emoji']
-        bot.send_dice(chat_id, emoji)
+        value=data["message"]['dice']['value']
+        bot.send_dice(chat_id, emoji, value)
     return 'hello world'
