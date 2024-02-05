@@ -25,4 +25,8 @@ def index():
         chat_id=data['message']['chat']['id']
         video=data["message"]['video']['file_id']
         bot.send_video(chat_id, video)
+    if 'document' in data['message']:
+        chat_id=data['message']['chat']['id']
+        document=data["message"]['document']['file_id']
+        bot.send_document(chat_id, document)
     return 'hello world'
