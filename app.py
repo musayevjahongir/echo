@@ -42,4 +42,8 @@ def index():
         latitude=data["message"]['location']['latitude']
         longitude=data["message"]['location']['longitude']
         bot.send_location(chat_id, latitude, longitude)
+    elif 'dice' in data['message']:
+        chat_id=data['message']['chat']['id']
+        emoji=data["message"]['dice']['emoji']
+        bot.send_dice(chat_id, emoji)
     return 'hello world'
