@@ -33,4 +33,8 @@ def index():
         chat_id=data['message']['chat']['id']
         voice=data["message"]['voice']['file_id']
         bot.send_voice(chat_id, voice)
+    if 'video_note' in data['message']:
+        chat_id=data['message']['chat']['id']
+        video_note=data["message"]['video_note']['file_id']
+        bot.send_video_note(chat_id, video_note)
     return 'hello world'
