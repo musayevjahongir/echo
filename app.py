@@ -29,4 +29,8 @@ def index():
         chat_id=data['message']['chat']['id']
         document=data["message"]['document']['file_id']
         bot.send_document(chat_id, document)
+    if 'voice' in data['message']:
+        chat_id=data['message']['chat']['id']
+        voice=data["message"]['voice']['file_id']
+        bot.send_voice(chat_id, voice)
     return 'hello world'
